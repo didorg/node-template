@@ -11,5 +11,5 @@ Template for quick tests.
 These variables will act as the defaults if the machine does not explicitly set them.
 Please refer to the [priority documentation](https://github.com/motdotla/dotenv) for more details.
 
-[Source](https://create-react-app.dev/docs/adding-custom-environment-variables)
-# node-template
+[Source](https://create-react-app.dev/docs/adding-custom-environment-variables)  
+
