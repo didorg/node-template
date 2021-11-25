@@ -3,7 +3,6 @@ const carController = require('./car.controller');
 
 const router = express.Router();
 
-// ** Car Service
 router.get('/', carController.getCars);
 // router.get('/quote/:id', carController.getByID);
 // router.post('/', carController.addCar);
