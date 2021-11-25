@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { getCars } = require('./app/app.service');
+const carRoutes = require('./modules/car.routes');
 
 // ** express app
 const app = express();
@@ -10,12 +10,11 @@ const port = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+// ** Routes **
+app.use('/cars', carRoutes);
+
 app.get('/', (req, res) => {
   res.json({ info: 'Node is UP-⬆️ And listening for requests...' });
-});
-
-app.get('/cars', (req, res) => {
-  res.send(getCars());
 });
 
 // middleware - 404 (final match)
