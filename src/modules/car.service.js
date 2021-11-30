@@ -10,6 +10,18 @@ const cars = require('../data/cars.json');
  * @param myParam The parameter for this method
  */
 
+const dealerCars = () => cars;
+
+const getCars = dealerCars();
+
+const getPriceyCars = getCars.map((item) => {
+  return {
+    ...item,
+    price: item.price * 1.2,
+  };
+});
+
 module.exports = {
-  cars,
+  getCars,
+  getPriceyCars,
 };
